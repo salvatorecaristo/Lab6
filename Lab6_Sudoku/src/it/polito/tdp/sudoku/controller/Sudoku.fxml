@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.sudoku.controller.SudokuController">
+   <left>
+      <Pane prefHeight="330.0" prefWidth="523.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="381.0" layoutY="43.0" mnemonicParsing="false" onAction="#doGenerate" text="Genera Sudoku" />
+            <Button layoutX="382.0" layoutY="160.0" mnemonicParsing="false" onAction="#doSolve" prefHeight="27.0" prefWidth="112.0" text="Risolvi Sudoku" />
+            <ChoiceBox layoutX="381.0" layoutY="88.0" prefHeight="27.0" prefWidth="112.0" />
+            <GridPane layoutX="128.0" layoutY="35.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lbl10" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl11" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl12" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl13" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl14" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl15" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl16" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl17" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl18" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="24.0" layoutY="35.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl1" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl2" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl3" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl4" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl5" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl6" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl7" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl8" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl9" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="232.0" layoutY="35.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl19" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl20" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl21" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl22" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl23" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl24" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl25" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl26" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl27" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="128.0" layoutY="126.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl37" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl38" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl39" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl40" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl41" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl42" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl43" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl44" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl45" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="24.0" layoutY="126.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl28" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl29" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl30" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl31" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl32" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl33" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl34" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl35" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl36" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="232.0" layoutY="126.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl46" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl47" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl48" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl49" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl50" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl51" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl52" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl53" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl54" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="128.0" layoutY="216.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl64" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl65" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl66" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl67" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl68" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl69" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl70" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl71" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl72" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="24.0" layoutY="216.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl55" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl56" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl57" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl58" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl59" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl60" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl61" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl62" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl63" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="232.0" layoutY="216.0" prefHeight="87.0" prefWidth="101.0" style="-fx-border-width: 2px; -fx-border-color: #EEE;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="lbl73" text="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl74" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl75" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                  <Label fx:id="lbl76" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl77" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl78" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label fx:id="lbl79" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl80" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label fx:id="lbl81" text="1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
