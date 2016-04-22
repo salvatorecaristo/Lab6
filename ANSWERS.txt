@@ -1,0 +1,66 @@
+- Cosa rappresenta il "livello" nel mio algoritmo ricorsivo?
+Il livello rappresenta una casella nella matrice del Sudoku (9*9). Esistono 81 livelli in totale.
+
+- Com'è fatta una soluzione parziale?
+Una soluzione parziale è una matrice Sukoku parzialmente completa
+
+- Come faccio a riconoscere se una soluzione parziale è anche completa?
+Una soluzione parziale (una matrice Sudoku) non può essere completa per definizione.
+
+- Data una soluzione parziale, come faccio a sapere se è valida o se non è valida? (nb. magari non posso)
+Data una soluzione parziale devo controllare che non ci siano numeri (da 1 a 9) ripetuti per ogni riga, per ogni
+colonna e per ogni regione.
+
+
+- Data una soluzione completa, come faccio a sapere se è valida o se non è valida?
+Data una matrice completa devo controllare che tutte le caselle siano riempite con numeri da 1 a 9
+in modo tale che in ogni riga, in ogni colonna e in ogni regione siano presenti tutte le cifre da 1 a 9, quindi senza ripetizioni.
+
+
+- Qual è la regola per generare tutte le soluzioni del livello+1 a partire da una soluzione parziale del livello corrente?
+Data una griglia Sudoku completa fino alla i-esima casella (i-esimo livello) provo ad inserire tutti i numeri da 1 a 9 nella
+casella i+1 cercando una soluzione che non violi i vincoli del gioco.
+
+
+- Qual è la struttura dati per memorizzare una soluzione (parziale o completa)?
+Una matrice di interi (int [][] matrix)
+
+
+- Qual è la struttura dati per memorizzare lo stato della ricerca (della ricorsione)?
+Un intero dove salvare il livello della ricorsione raggiunto
+
+
+- Sulla base dello schema presentato in Fig. 1, completare i blocchi: (nb. Alcuni potrebbero essere non necessari)
+
+A – Condizione di terminazione
+
+  if (passo == 9*9){
+    // ho ottenuto una soluzione valida!
+    return;
+  }
+
+
+B – Generazione di una nuova soluzione
+
+  riga = passo / 9
+  colonna = passo % 9
+  matrix[riga][colona] = j (j= 1...9)
+
+
+o C – Filtro sulla chiamata ricorsiva
+  if (check(matrix))
+    ricorsiva(matrix, livello+1)
+
+  .....
+
+  check(int [][] matrix){
+   ogni riga, in ogni colonna e in ogni regione devono essere presenti le cifre da 1 a 9 senza ripetizioni.
+  }
+
+
+D – Backtracking
+  matrix[riga][colona] = 0
+
+
+E – Sequenza di istruzioni da eseguire sempre
+  Nessuna

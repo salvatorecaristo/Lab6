@@ -60,7 +60,7 @@ public class SudokuGenerator {
 		}
 
 		for (int i = 0; i < toCheck.length; i++) {
-			if (legalMove(x, y, toCheck[i])) {
+			if (legalMove(board, x, y, toCheck[i])) {
 				board[x][y] = toCheck[i];
 				if (x == 8) {
 					if (y == 8)
@@ -92,7 +92,7 @@ public class SudokuGenerator {
 	 *            The value to check in said cell.
 	 * @return True if current is legal, false otherwise.
 	 */
-	private boolean legalMove(int x, int y, int current) {
+	boolean legalMove(int[][] board, int x, int y, int current) {
 		for (int i = 0; i < 9; i++) {
 			if (current == board[x][i])
 				return false;

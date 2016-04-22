@@ -5,13 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import it.polito.tdp.sudoku.model.Level;
+import it.polito.tdp.sudoku.model.RecursiveSudokuOne;
 import it.polito.tdp.sudoku.model.SudokuGenerator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
 public class SudokuController {
-
+	
 	final static int levelEasy = 45;
 	final static int levelAdvanced = 50;
 	final static int levelExpert = 55;
@@ -265,20 +268,50 @@ public class SudokuController {
     @FXML
     private Label lbl81;
     
+    @FXML
+    private ChoiceBox<Level> levelChoice;
+    
+    int [][] sudokuMatrix;
     List<Label> labelList = new ArrayList<Label>(); 
     
     @FXML
     void doGenerate(ActionEvent event){
+    	
     	// Per generare un nuova nuova griglia di Sudoku
 		SudokuGenerator sg = new SudokuGenerator();
-		int [][] matrix = sg.nextBoard(levelExpert);
+		Level level = levelChoice.getSelectionModel().getSelectedItem();
+		sudokuMatrix = sg.nextBoard(level.getLevelNumber());
 		
-		printMatrixOnScreen(matrix);
+		// Aggiorna la View
+		printMatrixOnScreen(sudokuMatrix);
     }
     
     @FXML
     void doSolve(ActionEvent event){
     	
+    	// Controllo se l'utente ha già generato una matrice da cui partire.
+    	if (sudokuMatrix != null) {
+    		
+	    	// Per risolvere una griglia Sudoku
+	    	RecursiveSudokuOne rsOne = new RecursiveSudokuOne();
+	    	
+	    	// Chiamo una funzione ricorsiva modificata che mi restituisce una sola soluzione.
+			int[][] solutionMatrix = rsOne.recursiveSudokuOne(sudokuMatrix);
+			
+			if (solutionMatrix != null)
+				printMatrixOnScreen(solutionMatrix);
+    	}
+    }
+    
+    void printMatrixOnScreen(int[][] matrix) {
+    	int counter = 0;
+    	for (int i = 0; i < 3; i++)
+    		for (int j=0; j< 3; j++)
+    			for(int h=0; h<3; h++)
+    				for(int k=0; k<3; k++){
+    					labelList.get(counter).setText(String.valueOf(matrix[h+(i*3)][k+(j*3)]));
+    					counter++;
+    				}
     }
     
     @FXML
@@ -446,18 +479,16 @@ public class SudokuController {
         labelList.add(lbl79);
         labelList.add(lbl80);
         labelList.add(lbl81);
-    }
-    
-    
-    void printMatrixOnScreen(int[][] matrix) {
-    	int counter = 0;
-    	for (int i = 0; i < 3; i++)
-    		for (int j=0; j< 3; j++)
-    			for(int h=0; h<3; h++)
-    				for(int k=0; k<3; k++){
-    					labelList.get(counter).setText(String.valueOf(matrix[h+(i*3)][k+(j*3)]));
-    					counter++;
-    				}
+        
+        for (Label l : labelList) {
+        	l.setText("0");
+        }
+
+        
+        levelChoice.getItems().add(new Level(levelEasy, "Easy"));
+        levelChoice.getItems().add(new Level(levelAdvanced, "Advance"));
+        levelChoice.getItems().add(new Level(levelExpert, "Expert"));
+        levelChoice.getSelectionModel().selectFirst();
     }
     
 }
