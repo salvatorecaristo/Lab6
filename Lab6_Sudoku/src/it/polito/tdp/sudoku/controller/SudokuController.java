@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import it.polito.tdp.sudoku.model.Level;
 import it.polito.tdp.sudoku.model.SudokuGenerator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
 public class SudokuController {
@@ -18,6 +20,9 @@ public class SudokuController {
 	
     @FXML
     private ResourceBundle resources;
+    
+    @FXML
+    private ChoiceBox<Level> levelChoice;
 
     @FXML
     private URL location;
@@ -446,6 +451,11 @@ public class SudokuController {
         labelList.add(lbl79);
         labelList.add(lbl80);
         labelList.add(lbl81);
+        
+        levelChoice.getItems().add(new Level(levelEasy, "Easy"));
+        levelChoice.getItems().add(new Level(levelAdvanced, "Advance"));
+        levelChoice.getItems().add(new Level(levelExpert, "Expert"));
+        levelChoice.getSelectionModel().selectFirst();
     }
     
     
